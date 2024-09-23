@@ -12,7 +12,7 @@
         </script>
 </head>
 
-<body class="bg-danger-subtle position-absolute top-50 start-50 translate-middle">
+<body class="bg-warning-subtle position-absolute top-50 start-50 translate-middle">
 
     <div class="card" style="width: 50rem;">
         <h2 align="center">AGREGAR AUTOS</h2>
@@ -63,7 +63,19 @@
                 </div>
                 <div align="center">
                     <button type="submit" class="btn btn-danger">Agregar Auto</button>
+                    <a href="{{ url_for('opciones') }}" class="btn btn-danger">Regresar</a>
                 </div>
+                <br>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                <div class="alert alert-{{ 'danger' if category == 'error' else 'success' }}" role="alert">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+
             </form>
         </div>
     </div>

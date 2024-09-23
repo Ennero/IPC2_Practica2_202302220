@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +11,9 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-danger-subtle position-absolute top-50 start-50 translate-middle">
+<body class="bg-warning-subtle position-absolute top-50 start-50 translate-middle">
 
-    <div class="card border border-danger-subtle" style="width: 30rem;">
+    <div class="card border warning-danger-subtle" style="width: 30rem;">
         <img src="https://www.pnguniverse.com/wp-content/uploads/2020/10/Rayo-McQueen.png" class="card-img-top"
             alt="El Rayo">
         <div class="card-body">
@@ -34,22 +33,18 @@
                 <input type="password" class="form-control" id="password" name="password" required><br>
                 <button type="submit" class="btn btn-danger">Iniciar Sesión</button>
             </form>
-
+            <br>
             {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
             {% for category, message in messages %}
-
             <div class="alert alert-danger" role="alert">
                 {{ message }}
             </div>
             {% endfor %}
             {% endif %}
             {% endwith %}
-
         </div>
     </div>
-
-
 </body>
 
 </html>
