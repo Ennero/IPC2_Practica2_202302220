@@ -1,8 +1,10 @@
+import os
+import secrets
 from flask import Flask, render_template, request, redirect, url_for, flash
 import poo 
 
 app = Flask(__name__)
-app.secret_key = 'my_secret_key'  # Clave secreta que no sé para qué sirve
+app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)
 
 # Variables con el usuario y la contraseña
 usuario = "empleado"
@@ -81,4 +83,4 @@ def listar():
     return render_template('listar.html', lista=lista)  # Pasar la lista de autos a la plantilla
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=os.environ.get("FLASK_DEBUG") == "1")

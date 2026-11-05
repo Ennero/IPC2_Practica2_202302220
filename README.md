@@ -1,68 +1,34 @@
-<div align="center">
+# Registro y listado de autos con Flask
 
-# 🎨 Web UI Layout & Frontend Interface (IPC2)
+Aplicación web Python con inicio de sesión de demostración, formularios para agregar autos y plantillas para consultar el listado.
 
-**Diseño de interfaz web responsiva, maquetación CSS moderna y control de vistas en HTML5 y CSS3.**
+## Requisitos
 
-[![Language](https://img.shields.io/badge/Language-HTML,%20CSS-blue?style=for-the-badge)](https://github.com/Ennero/IPC2_Practica2_202302220)
-[![Course](https://img.shields.io/badge/Course-Introducción%20a%20la%20Programación%20y%20Computación%202-003366?style=for-the-badge)](https://ingenieria.usac.edu.gt/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+Python 3 y dependencias de requirements.txt. La clave de sesión se toma de FLASK_SECRET_KEY; en desarrollo se genera una clave temporal si no se configura.
 
-</div>
+## Ejecución
 
----
+Los comandos parten de la raíz del repositorio, salvo donde se indica otra terminal.
 
-
-## 📌 Descripción General
-
-Este repositorio contiene la implementación y entrega de **🎨 Web UI Layout & Frontend Interface (IPC2)**, desarrollado en el curso de **Introducción a la Programación y Computación 2** en la Universidad de San Carlos de Guatemala.
-
-- **Objetivo:** Diseño de interfaz web responsiva, maquetación CSS moderna y control de vistas en HTML5 y CSS3.
-- **Stack Principal:** `HTML, CSS`.
-- **Área:** Ciencias de la Computación, Algoritmos y Desarrollo de Software.
-
----
-
-## 🚀 Características y Componentes
-
-- Implementación modular y buenas prácticas de codificación.
-- Manejo estructurado de datos, control de flujo y validaciones.
-- Documentación y scripts de soporte para compilación o ejecución.
-
----
-
-## 📦 Estructura del Proyecto
-
-```
-IPC2_Practica2_202302220/
-├── src/ o archivos de código fuente
-├── docs/ (si aplica)
-├── .gitignore
-├── LICENSE
-└── README.md
+```bash
+python -m pip install -r requirements.txt
+python app.py
 ```
 
----
+## Recorrido de demostración
 
-## ⚙️ Requisitos y Ejecución
+Abrir http://127.0.0.1:5000. Entrar al flujo de opciones, registrar un auto y revisar el listado. app.py define las rutas y poo.py el modelo utilizado.
 
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/Ennero/IPC2_Practica2_202302220.git
-   cd IPC2_Practica2_202302220
-   ```
-2. Ejecutar según el entorno (`HTML, CSS`):
-   - Consultar los scripts o archivos principales del proyecto para parámetros específicos.
+## Organización
 
----
+Carpetas de la entrega: [`templates/`](templates/).
 
-## 📄 Licencia
+## Alcance y límites
 
-Este proyecto está bajo la Licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+La autenticación y las colecciones son de demostración. Para conservar sesiones entre reinicios, definir FLASK_SECRET_KEY en el entorno. No usar el servidor de desarrollo como despliegue público.
 
----
+## Contexto y licencia
 
-## 👨‍💻 Autor
+Trabajo académico o de aprendizaje conservado en el portafolio de [Enner Mendizabal](https://github.com/Ennero). Los créditos de los trabajos en grupo se conservan en sus entregas y manuales.
 
-- **Enner Mendizabal** - [@Ennero](https://github.com/Ennero)  
-- *Facultad de Ingeniería, Universidad de San Carlos de Guatemala.*
+Consultar [LICENSE](LICENSE) para la licencia de la raíz. Las dependencias y los componentes con avisos o licencias propios conservan sus condiciones.
